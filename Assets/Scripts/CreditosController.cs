@@ -1,5 +1,5 @@
 /*
-Maneja la conducta de los botones en la pantalla de juego
+Controla la conducta de los botones en la pantalla de créditos
 Israel González Huerta
 A01751433
 */
@@ -10,21 +10,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class JuegoControlador : MonoBehaviour
+public class CreditosController : MonoBehaviour
 {
     private UIDocument menu;
-    private Button boton_menu; 
+    private Button boton_regresar;
 
     void OnEnable()
     {
         menu = GetComponent<UIDocument>();
         var root = menu.rootVisualElement;
-        boton_menu = root.Q<Button>("Boton_menu");
+        boton_regresar = root.Q<Button>("Regresar");
 
-        boton_menu.RegisterCallback<ClickEvent, String>(MostrarMenu, "Scenemenu");
+        boton_regresar.RegisterCallback<ClickEvent, String>(IniciarJuego, "SceneMenu");
     }
 
-    private void MostrarMenu(ClickEvent evt, String escena)
+    private void IniciarJuego(ClickEvent evt, String escena)
     {
         SceneManager.LoadScene(escena);
     }

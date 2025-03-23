@@ -1,9 +1,10 @@
-using UnityEngine;
-
-/**
+/*
 Para saber si el personaje está en el piso o no
-Autor: Israel González Huerta
+Israel González Huerta
+A01751433
 */
+
+using UnityEngine;
 
 public class EstadoPersonaje : MonoBehaviour
 {

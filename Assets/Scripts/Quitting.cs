@@ -1,3 +1,9 @@
+/**
+Cierra la aplicación
+Israel González Huerta
+A01751433
+*/
+
 using UnityEngine;
 
 //Código tomado de HK7a, en el video "Unity How To Make a Quit Button"

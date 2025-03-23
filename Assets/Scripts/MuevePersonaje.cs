@@ -1,3 +1,9 @@
+/**
+Controla el movimiento del personaje
+Israel González Huerta
+A01751433
+*/
+
 using System;
 using UnityEngine;
 
@@ -8,8 +14,6 @@ public class MuevePersonaje : MonoBehaviour
     [SerializeField]
     private float velocidadY;
     private Rigidbody2D rb;
-
-    /*public bool isGrounded = false;*/
 
     public CapsuleCollider2D capsule;
 
@@ -32,16 +36,6 @@ public class MuevePersonaje : MonoBehaviour
         rb.linearVelocity = new Vector2(movHorizontal * velocidadX, rb.linearVelocityY);
     }
 
-    /*
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        isGrounded = true;
-    }
 
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        isGrounded = false;
-    }
-    */
 
 }
